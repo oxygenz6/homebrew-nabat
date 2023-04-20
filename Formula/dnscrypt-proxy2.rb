@@ -8,8 +8,9 @@ class DnscryptProxy2 < Formula
   depends_on "go" => :build
 
   def install
-    system "cd", "dnscrypt-proxy"
-    system "go", "build", *std_go_args(ldflags: "-s -w")
+    cd "dnscrypt-proxy" do
+      system "go", "build", *std_go_args(ldflags: "-s -w")
+    done
   end
 
   test do
