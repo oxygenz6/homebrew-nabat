@@ -11,10 +11,6 @@ class DnscryptProxy2 < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "32455e154248d0a371b0c3994e52913930ebc8e853b842823d08f6e71da749d8"
-  end
-
   depends_on "go" => :build
 
   def install
